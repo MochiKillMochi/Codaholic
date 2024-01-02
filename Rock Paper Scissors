@@ -1,0 +1,99 @@
+package Game;
+
+import java.util.Scanner;
+
+public class Game {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner ( System.in);
+		
+		
+		
+		System.out.println("Pick rock, paper or scissors:");
+		
+		String guess = input.next();
+		
+		int computerPick = (int) (Math.random()*3)+1;
+		
+		if (computerPick == 1) {
+			System.out.println ( "The computer picked Rock");
+			System.out.println( "You picked " + guess);
+			
+				if(guess.equals("Rock")|| guess.equals( "rock")) {
+					while(guess.equals("Paper" )|| guess.equals( "paper"));
+					{
+						System.out.println("Draw, try again");
+						guess=input.next();
+					}
+				}
+				
+				else if (guess.equals("Paper" )|| guess.equals( "paper")) {
+					System.out.println("You win!");
+				}
+				else if (guess.equals ("Scissors") || guess.equals ("scissors")){ 
+					System.out.println("You lose!");
+				}
+				else { 
+					System.out.println("Invalid Entry");
+				}
+			
+		}
+		
+		else if (computerPick == 2) {
+			System.out.println ( "The computer picked Paper");
+			System.out.println( "You picked " + guess);
+			
+			if(guess.equals("Rock")|| guess.equals( "rock")) {
+				System.out.println("You lose!");
+			}
+			
+			else if (guess.equals("Paper" )|| guess.equals( "paper")) {
+				
+				while(guess.equals("Paper" )|| guess.equals( "paper"));
+				{
+					System.out.println("Draw, try again");
+					guess=input.next();
+				}
+			}
+			else if (guess.equals("Scissors")|| guess.equals ("scissors")){ 
+				System.out.println("You win!");
+			}
+			else { 
+				System.out.println("Invalid Entry");
+			
+			}
+			
+		}
+		
+		else if (computerPick == 3) {
+			System.out.println ( "The computer picked Scissors");
+			System.out.println( "You picked " + guess);
+			
+			if(guess.equals("Rock")|| guess.equals( "rock")) {
+				System.out.println("You win!");
+			}
+			
+			else if (guess.equals("Paper" )|| guess.equals( "paper")) {
+				System.out.println("You lose!");
+			}
+			else if (guess.equals ("Scissors") || guess.equals ("scissors")){ 
+				while(guess.equals("Paper" )|| guess.equals( "paper"));
+				{
+					System.out.println("Draw, try again");
+					guess=input.next();
+				}
+			}
+			else { 
+				System.out.println("Invalid Entry");
+			
+			}
+			
+		}
+		
+		
+		
+
+	}
+
+}
